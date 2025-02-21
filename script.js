@@ -44,7 +44,6 @@ for (var i = 0; i < imagePreviews.length; i++) {
 		imageIsDisplayed = true
 		displayedImageId = this.id
 		displayedImageNumber = parseInt(displayedImageId.replace('imgPreview', ''))
-		console.log(displayedImageNumber)
 
 		if ((displayedImageNumber -1) == -1) {
 			previousImageNumber = imagePreviews.length - 1
@@ -60,10 +59,6 @@ for (var i = 0; i < imagePreviews.length; i++) {
 
 		displayUnderlay = d.gebi('displayUnderlay')
 		displayUnderlay.classList.remove('hidden')
-
-		console.log('previous image number:', previousImageNumber)
-		console.log('displayed image number:', displayedImageNumber)
-		console.log('next image number:', nextImageNumber)
 
 		imageIsAdded = initImage(this.src, this.getAttribute('imgtitle'))
 
@@ -89,7 +84,6 @@ function getMinSize () {
 }
 
 function initImage(imgSrc, imgTitle) {
-	console.log(imgSrc)
 	imgContainer = d.ce('div')
 	imgContainer.id= 'currentDisplayedImageContainer'
 	imgContainer.classList.add('display-image-container')
